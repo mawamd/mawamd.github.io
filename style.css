@@ -1,0 +1,114 @@
+/* Container and layout styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flex-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main {
+    flex: 0 0 75%;
+    padding: 10px;
+}
+
+.game {
+    display: flex;
+    gap: 20px;
+}
+
+.terms, .definitions {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Term and definition styling with distinct colors */
+.term {
+    padding: 10px 15px;
+    border: 2px solid #1E88E5; /* Blue border for terms */
+    border-radius: 5px;
+    background-color: #BBDEFB; /* Light blue background for terms */
+    font-size: 16px;
+    cursor: grab;
+    user-select: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.definition {
+    padding: 10px 15px;
+    border: 2px solid #FF9800; /* Orange border for definitions */
+    border-radius: 5px;
+    background-color: #FFE0B2; /* Light orange background for definitions */
+    font-size: 16px;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.term.dragging {
+    opacity: 0.5;
+}
+
+.definition.hovered {
+    border-color: #FF5722; /* Darker orange when hovered */
+    background-color: #FFCCBC; /* Slightly darker background when hovered */
+}
+
+.definition.hidden {
+    visibility: hidden;
+}
+
+/* Tracking panel styling */
+.tracking-panel {
+    flex: 0 0 25%;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.tracking-panel h2 {
+    margin-top: 0;
+}
+
+.tracking-panel p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Specific styling for incorrect matches */
+#incorrectCount {
+    color: red;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+/* Control panel styling */
+.controls {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+button, input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}

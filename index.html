@@ -1,0 +1,88 @@
+<div class="container">
+    <h1>Match the Terms with Descriptions</h1>
+    
+    <!-- Flex container for main game area and right-side tracking panel -->
+    <div class="flex-container">
+        <!-- Main game area -->
+        <div class="main">
+            <div class="game">
+                <div class="terms" id="termsContainer">
+                    <!-- Updated default terms -->
+                    <div class="term" data-match="term0" draggable="true">access</div>
+                    <div class="term" data-match="term1" draggable="true">account number</div>
+                    <div class="term" data-match="term2" draggable="true">account statement</div>
+                    <div class="term" data-match="term3" draggable="true">ATM</div>
+                    <div class="term" data-match="term4" draggable="true">automatic bill pay</div>
+                    <div class="term" data-match="term5" draggable="true">balance</div>
+                    <div class="term" data-match="term6" draggable="true">debit card</div>
+                    <div class="term" data-match="term7" draggable="true">deposit</div>
+                    <div class="term" data-match="term8" draggable="true">direct deposit</div>
+                    <div class="term" data-match="term9" draggable="true">identification</div>
+                    <div class="term" data-match="term10" draggable="true">fraud</div>
+                    <div class="term" data-match="term11" draggable="true">magnetic stripe</div>
+                    <div class="term" data-match="term12" draggable="true">microchip</div>
+                    <div class="term" data-match="term13" draggable="true">mobile app</div>
+                    <div class="term" data-match="term14" draggable="true">money transfer</div>
+                    <div class="term" data-match="term15" draggable="true">password</div>
+                    <div class="term" data-match="term16" draggable="true">payee</div>
+                    <div class="term" data-match="term17" draggable="true">PIN</div>
+                    <div class="term" data-match="term18" draggable="true">POS terminal</div>
+                    <div class="term" data-match="term19" draggable="true">routing number</div>
+                    <div class="term" data-match="term20" draggable="true">security code</div>
+                    <div class="term" data-match="term21" draggable="true">security questions</div>
+                    <div class="term" data-match="term22" draggable="true">transaction</div>
+                    <div class="term" data-match="term23" draggable="true">transaction register</div>
+                    <div class="term" data-match="term24" draggable="true">username</div>
+                    <div class="term" data-match="term25" draggable="true">withdraw</div>
+                    <div class="term" data-match="term26" draggable="true">withdrawals</div>
+                </div>
+                <div class="definitions" id="definitionsContainer">
+                    <!-- Updated default definitions -->
+                    <div class="definition" data-value="term0">to get or make use of something</div>
+                    <div class="definition" data-value="term1">a unique number given to a checking or savings account</div>
+                    <div class="definition" data-value="term2">a record of activity on a particular account</div>
+                    <div class="definition" data-value="term3">a machine that allows you to electronically access your checking account; get cash, make deposits, and check the balance</div>
+                    <div class="definition" data-value="term4">a money transfer scheduled on a particular date to pay a recurring bill</div>
+                    <div class="definition" data-value="term5">the amount of money on hand</div>
+                    <div class="definition" data-value="term6">a plastic payment card connected to a checking account that can be used instead of cash when making purchases</div>
+                    <div class="definition" data-value="term7">put money in the bank</div>
+                    <div class="definition" data-value="term8">an electronic payment from one bank account to another</div>
+                    <div class="definition" data-value="term9">something used to show who a person is</div>
+                    <div class="definition" data-value="term10">the tricking of someone in order to cheat</div>
+                    <div class="definition" data-value="term11">black, brown, or silver strip of magnetic information found on the back of a debit or credit card</div>
+                    <div class="definition" data-value="term12">small thin piece of material with tiny electronic parts found on the front of a debit or credit card</div>
+                    <div class="definition" data-value="term13">a type of application software designed to run on a mobile device such as a smartphone or tablet</div>
+                    <div class="definition" data-value="term14">moving money from one account to another electronically</div>
+                    <div class="definition" data-value="term15">a secret word or phrase that must be used to gain access to a computer system, network, or online account</div>
+                    <div class="definition" data-value="term16">a person to whom money is paid; a person or business to whom a check is made payable</div>
+                    <div class="definition" data-value="term17">a personal identification number given to someone to make electronic transactions with a debit card possible</div>
+                    <div class="definition" data-value="term18">a card reader that a retailer uses to record a sale and initiate payment approval</div>
+                    <div class="definition" data-value="term19">a nine-digit code based on the U.S. Bank location where an account was opened. It’s the first set of numbers printed on the bottom of your checks on the left side</div>
+                    <div class="definition" data-value="term20">a three-digit number printed on the back of a debit card</div>
+                    <div class="definition" data-value="term21">questions only you would know the answer to, used for online banking to help keep your account secure</div>
+                    <div class="definition" data-value="term22">to carry out a business exchange</div>
+                    <div class="definition" data-value="term23">a booklet where withdrawals and deposits for a checking account can be recorded</div>
+                    <div class="definition" data-value="term24">a unique series of characters used to identify a user and allow access to a computer system, network, or online account</div>
+                    <div class="definition" data-value="term25">to take money out of an account</div>
+                    <div class="definition" data-value="term26">money taken out of the bank</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right-side panel for tracking -->
+        <div class="tracking-panel">
+            <h2>Tracking</h2>
+            <p style="color: red; font-weight: bold;">Incorrect Matches: <span id="incorrectCount">0</span></p>
+            <p>Elapsed Time: <span id="elapsedTime">0</span> seconds</p>
+            <p>Best Time: <span id="bestTime">--</span> seconds</p>
+        </div>
+    </div>
+
+    <!-- Control panel -->
+    <div class="controls">
+        <button id="scrambleButton">Scramble Definitions</button>
+        <input type="file" id="uploadCSV" accept=".csv">
+    </div>
+
+    <div id="feedback"></div>
+</div>
